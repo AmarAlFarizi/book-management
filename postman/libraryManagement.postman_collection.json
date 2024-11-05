@@ -1,0 +1,1456 @@
+{
+	"info": {
+		"_postman_id": "f675f026-3d49-4476-905f-f5b144d5ade1",
+		"name": "libraryManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35948074"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "GetAllData",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"authors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "831"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33f-aKy0CtjlwKXsCnH6hA15bl7lc4g\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:06:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Authors retrieved successfully\",\n    \"authors\": [\n        {\n            \"_id\": \"672a1c14879935eaabef0940\",\n            \"name\": \"izzy go\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2024-11-05T13:22:28.761Z\",\n            \"updatedAt\": \"2024-11-05T13:22:28.761Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"672a28bb0ee6e2c4351e3229\",\n            \"name\": \"Ryota\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2024-11-05T14:16:27.549Z\",\n            \"updatedAt\": \"2024-11-05T14:16:27.549Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"672a28ce0ee6e2c4351e322c\",\n            \"name\": \"Kuroko\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2024-11-05T14:16:46.561Z\",\n            \"updatedAt\": \"2024-11-05T14:16:46.561Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"672a28da0ee6e2c4351e322e\",\n            \"name\": \"Daiki\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2024-11-05T14:16:58.889Z\",\n            \"updatedAt\": \"2024-11-05T14:16:58.889Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"672a292381d65cac0a9e88e8\",\n            \"name\": \"Mulyono\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2024-11-05T14:18:11.789Z\",\n            \"updatedAt\": \"2024-11-05T14:18:11.789Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/authors/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a28da0ee6e2c4351e322e"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a4-+RQq6nvRqihmo8DHVPAISh82CT8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:23:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"author\": {\n        \"_id\": \"672a28da0ee6e2c4351e322e\",\n        \"name\": \"Daiki\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2024-11-05T14:16:58.889Z\",\n        \"updatedAt\": \"2024-11-05T14:16:58.889Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Method Post Author",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"gohan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"authors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf-mMxeoWNE2tMKqP6QS7CWNjj1mrA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:07:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Author created successfully\",\n    \"newAuthor\": {\n        \"name\": \"gohan\",\n        \"isDeleted\": false,\n        \"_id\": \"672a349b1e5f9c825cf3d22f\",\n        \"createdAt\": \"2024-11-05T15:07:07.611Z\",\n        \"updatedAt\": \"2024-11-05T15:07:07.611Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Author By Id",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"gohan update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/authors/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a349b1e5f9c825cf3d22f"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "218"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"da-xH6UJFsCMaIztvws1X2upxrH9As\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:07:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Author updated successfully\",\n    \"updatedAuthor\": {\n        \"_id\": \"672a349b1e5f9c825cf3d22f\",\n        \"name\": \"gohan update\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2024-11-05T15:07:07.611Z\",\n        \"updatedAt\": \"2024-11-05T15:07:07.611Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/authors/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"authors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "672a30b89142851a3fbe6395"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletebyId",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/authors/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"authors",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a292381d65cac0a9e88e8"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-y5E/g1GAJiT/kj57/wpYgn2BeFk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:08:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Author deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "getAllBook",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"izzy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/author",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"author"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1268"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f4-4rNRDobO4/2hjzQuSKx11REvJK8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:08:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"672a24f0879935eaabef094a\",\n        \"title\": \"The Power of Mulyono\",\n        \"description\": \"this book explain about mulyono power\",\n        \"summary\": \"This book covers all aspects of mulyono power\",\n        \"stocks\": [\n            {\n                \"book_identifier\": \"978-623-1234-84-2\",\n                \"status\": \"available\",\n                \"_id\": \"672a24f0879935eaabef094b\"\n            }\n        ],\n        \"authored\": \"672a1c14879935eaabef0940\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"672a29f67bf2d73d14118b13\",\n        \"title\": \"The King is Back\",\n        \"description\": \"this book explain kingslayer\",\n        \"summary\": \"This book covers all aspects of king power\",\n        \"stocks\": [\n            {\n                \"book_identifier\": \"978-623-1234-99-2\",\n                \"status\": \"available\",\n                \"_id\": \"672a29f67bf2d73d14118b14\"\n            }\n        ],\n        \"authored\": \"672a28bb0ee6e2c4351e3229\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"672a2a5e6fcd56d630ec9e49\",\n        \"title\": \"kingslayer\",\n        \"description\": \"this book explain about \",\n        \"summary\": \"This book covers all aspects of king power\",\n        \"book_identifier\": \"978-623-1234-100-2\",\n        \"stocks\": [\n            {\n                \"status\": \"available\",\n                \"_id\": \"672a2a5e6fcd56d630ec9e4a\"\n            }\n        ],\n        \"authored\": \"672a28bb0ee6e2c4351e3229\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"672a2f45a4d5a751a9fc2629\",\n        \"title\": \"Elecced\",\n        \"description\": \"this book explain how to live like a cat \",\n        \"summary\": \"This book covers all aspects of power live cat\",\n        \"book_identifier\": \"978-623-1234-10-2\",\n        \"stocks\": [\n            {\n                \"status\": \"available\",\n                \"_id\": \"672a2f45a4d5a751a9fc262a\"\n            }\n        ],\n        \"authored\": \"672a28ce0ee6e2c4351e322c\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Method Post Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"kingslayer\",\r\n  \"description\": \"this book explain about \",\r\n  \"summary\": \"This book covers all aspects of king power\",\r\n  \"book_identifier\": \"978-623-1234-100-2\",\r\n  \"stocks\": [{  \"status\": \"available\" }],\r\n  \"authored\": \"672a28bb0ee6e2c4351e3229\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Konoha\",\r\n  \"description\": \"this book explain about naruto and friends\",\r\n  \"summary\": \"this book explain about king of nepotism and ...... salah \",\r\n  \"book_identifier\": \"978-623-9999-10-2\",\r\n  \"stocks\":[{ \"status\": \"available\" }],\r\n  \"authored\": \"672a349b1e5f9c825cf3d22f\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "379"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17b-HCNYwYPDhoUv2Joq+foDzI7fMPY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:10:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book created successfully\",\n    \"book\": {\n        \"title\": \"Konoha\",\n        \"description\": \"this book explain about naruto and friends\",\n        \"summary\": \"this book explain about king of nepotism and ...... salah \",\n        \"book_identifier\": \"978-623-9999-10-2\",\n        \"stocks\": [\n            {\n                \"status\": \"available\",\n                \"_id\": \"672a35611e5f9c825cf3d23c\"\n            }\n        ],\n        \"authored\": \"672a349b1e5f9c825cf3d22f\",\n        \"_id\": \"672a35611e5f9c825cf3d23b\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdatebyId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrower",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/borrowers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"borrowers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-3X/cSGM+AQvttCpeXYYXksJ3kYo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:17:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"672a37131e5f9c825cf3d23f\",\n        \"name\": \"Fe!n\",\n        \"joinAt\": \"2024-11-05T15:17:39.318Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/borrowers/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"borrowers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/borrowers/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"borrowers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a37d31e5f9c825cf3d247"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"66-ELW/y5CLj9uqmcY/GKAWkCVxZv0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:22:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"672a37d31e5f9c825cf3d247\",\n    \"name\": \"Kendrick Lamar\",\n    \"joinAt\": \"2024-11-05T15:20:51.039Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Fe!n\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/borrowers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"borrowers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Fe!n\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/borrowers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"borrowers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-iCYUUwhFyHDcAPDPehPa1o6vDLA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:17:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Fe!n\",\n    \"_id\": \"672a371e1e5f9c825cf3d242\",\n    \"joinAt\": \"2024-11-05T15:17:50.048Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Byid",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Travis Scot\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/borrowers/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"borrowers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "672a37131e5f9c825cf3d23f"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Travis Scot\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/borrowers/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"borrowers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a37131e5f9c825cf3d23f"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "99"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"63-4MZxAQVVv8/XQM6cciWgMqxHAdE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:19:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"672a37131e5f9c825cf3d23f\",\n    \"name\": \"Travis Scot\",\n    \"joinAt\": \"2024-11-05T15:17:39.318Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/borrowers/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"borrowers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a371e1e5f9c825cf3d242"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-bXrjt7fgyaFQ33+92pGrPhNrMug\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:21:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Borrower deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Horor updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "463"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1cf-WxSwGs+2jATENDArPMYJ7KQ1XKU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:48:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"672a3d013b9ddd2a07507724\",\n        \"name\": \"Action\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2024-11-05T15:42:57.020Z\",\n        \"updatedAt\": \"2024-11-05T15:42:57.020Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"672a3d093b9ddd2a07507726\",\n        \"name\": \"Horor\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2024-11-05T15:43:05.957Z\",\n        \"updatedAt\": \"2024-11-05T15:43:05.957Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"672a3d183b9ddd2a07507728\",\n        \"name\": \"Scfi\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2024-11-05T15:43:20.408Z\",\n        \"updatedAt\": \"2024-11-05T15:43:20.408Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Horor Terupdate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "672a3cef3b9ddd2a07507722"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Horor Terupdate\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/categories/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a3cef3b9ddd2a07507722"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a3-B3Yzvu+5MTb1CeT28YeeWMk/Rns\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:47:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"672a3cef3b9ddd2a07507722\",\n    \"name\": \"Horor Terupdate\",\n    \"isDeleted\": false,\n    \"createdAt\": \"2024-11-05T15:42:39.109Z\",\n    \"updatedAt\": \"2024-11-05T15:42:39.110Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Scfi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Fiksi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "153"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"99-xnPQbEyJHrusBVcP5pFNK2X8BcU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:42:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Fiksi\",\n    \"isDeleted\": false,\n    \"_id\": \"672a3cef3b9ddd2a07507722\",\n    \"createdAt\": \"2024-11-05T15:42:39.109Z\",\n    \"updatedAt\": \"2024-11-05T15:42:39.110Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteById",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/categories/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "672a3cef3b9ddd2a07507722"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-oSB9C9UJoaUkZ5Mu5gkTHkZwuV4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Nov 2024 15:48:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "BorrowBooks",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
